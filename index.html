@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JS Fundamentals</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <p class="eyebrow">JavaScript Fundamentals</p>
+  <h1>Three <span>JS</span> Demos</h1>
+  <p>DOM manipulation · closures · promises · events · scope · hoisting</p>
+</header>
+
+<!-- Tab Navigation -->
+<nav class="tabs">
+  <button class="tab-btn active" data-tab="counter">01 — Counter</button>
+  <button class="tab-btn"        data-tab="todo">02 — To-Do</button>
+  <button class="tab-btn"        data-tab="quiz">03 — Quiz</button>
+</nav>
+
+<!-- PANEL 1: Counter -->
+<section class="panel active" id="panel-counter">
+  <div class="card">
+    <p class="card-title">Demo 01 — Counter</p>
+    <div class="counter-display">
+      <div class="counter-num zero" id="counterNum">0</div>
+    </div>
+    <div class="counter-btns">
+      <button class="btn btn-dec" id="btnDec">− 1</button>
+      <button class="btn btn-rst" id="btnRst">Reset</button>
+      <button class="btn btn-inc" id="btnInc">+ 1</button>
+    </div>
+    <div class="counter-history" id="counterHistory">History will appear here…</div>
+    <div class="concepts">
+      <span class="tag">variables</span>
+      <span class="tag">closures</span>
+      <span class="tag">scope</span>
+      <span class="tag">DOM events</span>
+      <span class="tag">hoisting</span>
+    </div>
+  </div>
+</section>
+
+<!--  PANEL 2: To-Do  -->
+<section class="panel" id="panel-todo">
+  <div class="card">
+    <p class="card-title">Demo 02 — To-Do List</p>
+    <div class="todo-input-row">
+      <input class="todo-input" id="todoInput" placeholder="Add a task…" maxlength="80" />
+      <button class="btn-add" id="btnAddTodo" aria-label="Add task">+</button>
+    </div>
+    <div class="todo-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="active">Active</button>
+      <button class="filter-btn" data-filter="done">Done</button>
+    </div>
+    <ul class="todo-list" id="todoList"></ul>
+    <div class="todo-footer">
+      <span id="todoCount">0 items left</span>
+      <button class="btn-clear" id="btnClearDone">Clear completed</button>
+    </div>
+    <div class="concepts">
+      <span class="tag">arrays</span>
+      <span class="tag">objects</span>
+      <span class="tag">DOM manipulation</span>
+      <span class="tag">events</span>
+      <span class="tag">closures</span>
+    </div>
+  </div>
+</section>
+
+<!-- PANEL 3: Quiz -->
+<section class="panel" id="panel-quiz">
+  <div class="card">
+    <p class="card-title">Demo 03 — JS Quiz</p>
+
+    <div id="quizBody">
+      <div class="quiz-progress-bar">
+        <div class="quiz-progress-fill" id="quizBar" style="width:0%"></div>
+      </div>
+      <div class="quiz-meta">
+        <span id="quizCounter">Question 1 / 6</span>
+        <span id="quizScore">Score: 0</span>
+      </div>
+      <p class="quiz-q" id="quizQ"></p>
+      <div class="quiz-options" id="quizOpts"></div>
+      <div class="quiz-feedback hidden" id="quizFeedback"></div>
+      <div class="quiz-next-row">
+        <button class="btn-next" id="btnNext">Next →</button>
+      </div>
+    </div>
+
+    <div class="quiz-result" id="quizResult">
+      <div class="result-score" id="resultScore"></div>
+      <div class="result-label">out of 6</div>
+      <div class="result-grade" id="resultGrade"></div>
+      <p class="result-msg" id="resultMsg"></p>
+      <button class="btn-restart" id="btnRestart">Try Again</button>
+    </div>
+
+    <div class="concepts">
+      <span class="tag">promises</span>
+      <span class="tag">async</span>
+      <span class="tag">scope</span>
+      <span class="tag">closures</span>
+      <span class="tag">hoisting</span>
+      <span class="tag">DOM events</span>
+    </div>
+  </div>
+</section>
+
+<script src="script.js" defer></script>
+</body>
+</html>
