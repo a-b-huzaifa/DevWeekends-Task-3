@@ -23,6 +23,7 @@ tabBtns.forEach(btn => {
   function updateDisplay() {
     numEl.textContent = count;
     numEl.className   = 'counter-num ' + (count > 0 ? 'pos' : count < 0 ? 'neg' : 'zero');
+    
     // bump animation
     numEl.classList.add('bump');
     setTimeout(() => numEl.classList.remove('bump'), 150);
